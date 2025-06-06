@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Syne:wght@400..800&display=swap');
+
+.footer {
+  background-color: #2EAF7D;
+  color: #ffffff;
+  padding: 40px 0 5px 0;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 100px;
+  padding: 0 100px 0 100px;
+}
+
+.footer-logo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-logo {
+  width: 170px;
+  height: auto;
+}
+
+.social-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: transform 0.3s ease;
+}
+
+.social-button:hover {
+  transform: scale(1.1);
+}
+
+.social-button img {
+  width: 40px;
+  height: 40px;
+}
+
+.footer-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.working-hours {
+  width: 100%;
+  border-collapse: collapse;
+
+}
+
+.working-hours td {
+  font-family: "Mulish", sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+  width:  100px;
+  
+}
+
+.working-hours tr:last-child td {
+  border-bottom: none;
+}
+
+.contact-item {
+  margin: 0 100px 30px 0;
+  line-height: 1.5;
+  font-family: "Mulish", sans-serif;
+  font-weight: 300;
+}
+
+.footer-description {
+  margin-top: 30px;
+  line-height: 1.6;
+  font-size: 16px;
+  font-weight: 300;
+  font-family: "Mulish", sans-serif;
+}
+
+.footer-copyright {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+
+}
+
+.footer-copy {
+    color: #ffffff;
+    font-family: "Mulish", sans-serif;
+    font-weight: 300;
+    width: 100%;
+    padding: 10px 0 0 100px;
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    margin-top: 20px; /* опционально — для отступа перед линией */
+}
+
+
+/* Адаптация для планшетов */
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .footer-logo-section {
+    grid-column: span 2;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 600px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .footer-logo-section {
+    grid-column: span 1;
+  }
+  
+  .social-buttons {
+    justify-content: center;
+  }
+}

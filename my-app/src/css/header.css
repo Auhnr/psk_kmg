@@ -1,0 +1,80 @@
+header, #logo, #nav-bar {
+    margin: 0;
+    padding: 0;
+}
+
+header,
+#logo,
+#nav-bar,
+.mainpage,
+.hero-img {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    align-items: center;
+    background-color: #FFFFFF;
+    max-width: 100%;
+}
+
+#logo img {
+    display: block;
+    width: 150px;
+    height: auto;
+    margin-left: auto;
+    padding-left: 25px;
+    padding-top: 25px;
+    margin-bottom: 15px;
+}
+
+#nav-bar ul{
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    gap: 65px;
+    list-style-type: none;
+    padding: 0px;
+    margin-right: 40px;
+    margin-top: 25px;
+}
+
+#nav-bar ul li:first-child a {
+    color: #4E977A;
+    padding: 10px 20px;
+}
+
+#nav-bar li{
+    font-family: 'Inter', sans-serif;
+    font-size: 17px;
+    color: #222222;
+}
+
+#nav-bar {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    gap: 30px; /* space between nav items and lang button */
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+#nav-bar a {
+    text-decoration: none;
+    color: #222222;
+}
+
+#language-selector {
+    color: #4E977A;
+    font-family: 'Inter', sans-serif;
+    font-size: 17px;
+    padding: 10px 15px 10px 10px; /* leave space for the arrow */
+    margin-top: 5px;
+    margin-right: 30px;
+    border: 2px solid #4E977A;
+    gap: 10px;
+    background: transparent;
+    font-weight: 500;
+    cursor: pointer;
+}

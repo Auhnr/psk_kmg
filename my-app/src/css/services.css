@@ -1,0 +1,286 @@
+/* Основной блок секции */
+.what-we-offer {
+  display: flex;
+  align-items: center; 
+  gap: 10px;
+  background-color: #f8f9fa;  
+  margin: 0 auto;
+  font-size: 16px; 
+  padding: 3px 13px;
+  width: 170px;
+  color: #1C2752;
+}
+
+.helmet-icon {
+  width: 20px; 
+  height: 23px; 
+}
+
+.what-we-offer p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1; 
+}
+
+.services-header h2 {
+  color: #1C2752;
+  font-size: 40px;
+  text-align: center;
+  margin-top: 25px;
+}
+
+.services-section {
+  padding: 30px 0 30px 0;
+}
+
+/* Обёртка слайдера */
+.service-slider-wrapper {
+  width: 100%;
+  padding: 40px 0 85px 0;
+  position: relative;
+  background-color: #2EAF7D;
+  
+}
+
+/* Слайдер */
+.service-swiper {
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+}
+
+
+
+/* Карточка услуги */
+.service-card-wide {
+  display: flex;
+  min-height: 400px;
+  background-color: white;
+  position:  relative;
+  
+}
+
+.service-text {
+  flex: 1;
+  padding: 60px 30px 60px 70px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+  justify-content: space-between; /* Равномерно распределяет пространство */
+  height: 100%; /* Занимает всю высоту родителя */
+}
+
+.service-subtitle {
+  display: block;
+  font-size: 14px;
+  color: #1C2752;
+  letter-spacing: 1px;
+  background-color: #F4F4F4;
+  padding: 0 20px 0 20px;
+}
+
+.service-subtitle-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.subtitle-icon {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  margin-right: 8px;
+}
+
+.service-text h4 {
+  font-size: 40px;
+  color: #1C2752;
+  margin: 30px 120px 30px 0;
+  line-height: 1.4;
+  
+}
+
+.service-text p {
+  font-size: 17px;
+  color: #495057;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  margin-right: 150px;
+}
+
+/* Стили только для последней карточки */
+.last-service-card {
+  height: 100%;
+}
+
+.last-service-card .service-text {
+  padding: 60px 30px 55px 70px; /* Меньше отступы */
+}
+
+.last-service-card .service-text h4 {
+  font-size: 38px; /* Чуть меньше заголовок */
+  margin: 20px 10px 15px 0;
+  color: #1C2752;
+}
+
+.last-service-card .service-text p {
+  font-size: 17px;
+  margin: 7px 0 7px 0;
+}
+
+.last-service-card .service-image img {
+  padding: 60px 0; 
+}
+
+.last-service-card .service-button {
+  align-self: flex-start;
+  padding: 14px 40px;
+  background-color: #2EAF7D;
+  color: #1C2752;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(13, 110, 253, 0.3);
+}
+
+/* Адаптив для последней карточки */
+@media (max-width: 992px) {
+  .last-service-card {
+    min-height: auto;
+  }
+  .last-service-card .service-text {
+    padding: 30px;
+  }
+  .last-service-card .service-text h4 {
+    font-size: 24px;
+  }
+}
+
+/* Кнопка "Подробнее" */
+.service-button {
+  align-self: flex-start;
+  padding: 15px 40px;
+  margin-top: 20px;
+  background-color: #2EAF7D;
+  color: #1C2752;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(13, 110, 253, 0.3);
+}
+
+.service-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(0, 120, 46, 0.4);
+}
+
+/* Изображение услуги */
+.service-image {
+  flex: 0.7;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-image img {
+  width: 90%;
+  height: 100%;
+  padding: 60px 0;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.5s ease;
+}
+
+/* Навигационные стрелки */
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  bottom: 15px;
+  top: auto; 
+  width: 55px;
+  height: 55px;
+  background-color: #2EAF7D;
+  display: flex;
+  border: 1px solid white;       
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto;
+  opacity: 0.7;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.swiper-button-prev {
+  left: 50%;
+  transform: translateX(-60px);
+}
+
+.swiper-button-next {
+  left: 50%;
+  transform: translateX(20px); 
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;
+}
+
+
+/* Адаптивность */
+@media (max-width: 992px) {
+  .service-card-wide {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .service-text {
+    padding: 30px;
+  }
+
+  .service-text h4 {
+    font-size: 24px;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 40px;
+    height: 40px;
+    right: -20px;
+    left: -20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .service-slider-wrapper {
+    padding: 20px 10px;
+  }
+
+  .service-text {
+    padding: 25px;
+  }
+
+  .service-subtitle {
+    font-size: 14px;
+  }
+
+  .service-text h4 {
+    font-size: 22px;
+  }
+
+  .service-text p {
+    font-size: 14px;
+  }
+
+  .service-button {
+    padding: 10px 25px;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
+}

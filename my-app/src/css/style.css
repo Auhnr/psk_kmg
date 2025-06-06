@@ -1,0 +1,18 @@
+* {
+    font-family: 'Inter', sans-serif;
+    overflow-x: none;
+    margin: 0;
+    padding: 0;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: 'Inter', sans-serif;
+    background-color: white;
+    margin: 0;            /* THIS removes the default white space */
+    padding: 0;
+    overflow-x: hidden;
+}

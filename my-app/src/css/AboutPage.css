@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Syne:wght@400..800&display=swap');
+
+
+.company-container {
+  margin: 40px 120px;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.company-container h1, 
+.company-container h2 {
+  color: #2c3e50;
+}
+
+/* Стили для заголовка компании с иконкой */
+.company-header {
+    display: flex;
+    background-color: #F4F4F4;
+    padding: 0 0 0 20px;
+    width: 310px;
+    font-family: "Inter", sans-serif;
+    margin-bottom: 10px;
+}
+
+.company-header-icon {
+  width: 22px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.company-header-title {
+  font-weight: 300;
+  color: #1C2752;
+  font-size: 18px;
+  margin-bottom: 0;
+}
+
+.company-container-h2 {
+  font-size: 45px;
+  margin: 30px 0 20px;
+  padding-bottom: 10px;
+  font-family: "Mulish", sans-serif;
+  color: #1C2752;
+}
+
+/* Секция с изображением и текстом */
+.company-intro {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 70px;
+  margin-bottom: 50px;
+}
+
+.company-image {
+  width: 50%;
+}
+
+.company-image img {
+  width: 98%;
+  height: 97%;
+}
+
+.company-description {
+  flex: 2;
+  font-family: 'Mulish', sans-serif;
+  font-size: 18px;
+  color: #7E7E7E;
+}
+
+/* Секция с политикой качества */
+.quality-policy {
+  background-color: white;
+  padding: 30px 50px 30px 50px;
+  box-shadow: 1px 3px 15px  rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+
+.policy-list {
+  padding-left: 20px;
+}
+
+.quality-policy-h2 {
+  font-size: 45px;
+  margin-left: 20px;
+  padding-bottom: 10px;
+  font-family: "Mulish", sans-serif;
+  color: #1C2752;
+}
+
+.policy-list li {
+  position: relative;
+  list-style-type: none;
+  padding-left: 30px;
+  color: #7E7E7E;
+  font-size: 18px;
+}
+
+.policy-list li:before {
+  content: "•";
+  color: #7E7E7E;
+  font-size: 1.5rem;
+  position: absolute;
+  left: 9px;
+  top: -5px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .company-intro {
+    flex-direction: column;
+  }
+  
+  .company-image, 
+  .company-description {
+    flex: none;
+    width: 100%;
+  }
+}

@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Syne:wght@400..800&display=swap');
+/* Общие стили для страницы с деталями услуг */
+.details-container {
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+/* Стили для блоков с информацией */
+.details-block {
+  padding-bottom: 40px;
+  margin-left: 160px;
+}
+
+.details-block:last-child {
+  border-bottom: none;
+}
+
+.details-main-title {
+  font-weight: 300;
+  color: #1C2752;
+  font-size: 17px;
+  margin-bottom: 0;
+}
+
+.details-flex-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap; /* чтобы не ломалось на маленьких экранах */
+}
+
+.details-text-side {
+  width: 45%;
+  min-width: 300px;
+}
+
+.img-sec-services {
+  max-width: 400px;
+  height: auto;
+  object-fit: cover;
+  margin: 60px 170px 0 0;
+}
+
+.img-sec-service {
+  max-width: 450px;
+  height: auto;
+  object-fit: cover;
+  margin: 70px 170px 0 0;
+}
+
+.img-sec-servicess {
+  max-width: 490px;
+  height: auto;
+  object-fit: cover;
+  margin: 130px 170px 0 0;
+}
+
+.details-line {
+    display: flex;
+    background-color: #F4F4F4;
+    padding: 0 0 0 20px;
+    width: 310px;
+    font-family: "Inter", sans-serif;
+    margin-left: 80px;
+    margin-bottom: 10px;
+
+}
+
+.details-build {
+    display: flex;
+    background-color: #F4F4F4;
+    padding: 0 0 0 20px;
+    width: 570px;
+    font-family: "Inter", sans-serif;
+    margin-bottom: 10px;
+    margin-top: 60px;
+}
+
+
+.details-icon {
+  width: 22px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.title-service {
+  font-size: 45px;
+  color: #1C2752;
+  margin: 0 0 20px 80px;
+    font-weight: 400;
+  font-family: "Mulish", sans-serif;
+}
+
+.details-subtitle {
+  font-size: 45px;
+  color: #1C2752;
+  margin-bottom: 25px;
+  font-weight: 400;
+  font-family: "Mulish", sans-serif;
+}
+
+
+/* Стили для списков */
+.details-features {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 20px;
+  width: 520px;
+}
+
+.details-feature {
+  position: relative;
+  padding-left: 25px;
+  font-size: 19px;
+  font-weight: 300;
+  color: #7E7E7E;
+}
+
+.details-feature:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #7E7E7E;
+  font-size: 20px;
+}
+
+.details-specs {
+  list-style-type: none;
+  padding-left: 40px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.details-spec {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 10px;
+  line-height: 1.5;
+  font-size: 15px;
+  color: #555;
+}
+
+.details-spec:before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: #666;
+}
+
+/* Стили для раздела оборудования */
+.details-equipment-button {
+  font-size: 20px;
+  font-weight: 400;
+  color: #1C2752;
+  background-color: #2EAF7D;
+  border: none;
+  cursor: pointer;
+  padding:  15px 25px;
+  font-family: "Mulish", sans-serif;
+  margin-top: 15px;
+}
+
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+  .details-main-title {
+    font-size: 28px;
+  }
+  
+  .details-subtitle {
+    font-size: 20px;
+  }
+  
+  .details-feature, .details-spec {
+    font-size: 15px;
+  }
+  
+  .details-specs {
+    padding-left: 20px;
+  }
+}

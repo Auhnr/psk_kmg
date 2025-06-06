@@ -1,0 +1,113 @@
+/* Общие стили */
+.projects-container {
+  margin: 30px 210px;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Заголовок с иконкой */
+.projects-header {
+    display: flex;
+    background-color: #F4F4F4;
+    padding: 0 0 0 20px;
+    width: 310px;
+    font-family: "Inter", sans-serif;
+    margin-bottom: 10px;
+}
+
+.projects-header-icon {
+  width: 22px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.projects-header-title {
+  font-weight: 300;
+  color: #1C2752;
+  font-size: 18px;
+  margin-bottom: 0;
+}
+
+/* Основные заголовки */
+.projects-main-title {
+  font-size: 45px;
+  margin: 30px 0 20px;
+  padding-bottom: 10px;
+  font-family: "Mulish", sans-serif;
+  color: #1C2752;
+}
+
+.projects-subtitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: #7E7E7E;
+  margin: 25px 0 25px 0;
+}
+
+/* Колонки проектов */
+.projects-columns {
+  display: flex;
+  gap: 70px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 300;
+  color: #7E7E7E;
+}
+
+.projects-column {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Списки проектов */
+.projects-list,
+.projects-list-full {
+  padding-left: 20px;
+  list-style-type: none;
+}
+
+.projects-list li,
+.projects-list-full li {
+  position: relative;
+  padding-left: 25px;
+}
+
+.projects-list li:before,
+.projects-list-full li:before {
+  content: "•";
+  color: #7E7E7E;
+  font-size: 1.5rem;
+  position: absolute;
+  left: 0;
+  top: -5px;
+}
+
+.projects-list-full {
+  margin-left: 20px;
+  font-size: 18px;
+  font-weight: 300;
+  color: #7E7E7E;
+width: 100%;
+max-width: 1020px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .projects-columns {
+    flex-direction: column;
+  }
+  
+  .projects-header-title {
+    font-size: 1.3rem;
+  }
+  
+  .projects-main-title {
+    font-size: 1.7rem;
+  }
+  
+  .projects-subtitle {
+    font-size: 1.3rem;
+  }
+}
