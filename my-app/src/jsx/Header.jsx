@@ -18,7 +18,7 @@ export default function Header() {
   <li><Link to="/about">О компании</Link></li>
   <li><Link to="/services">Услуги</Link></li>
   <li><Link to="/projects">Проекты</Link></li>
-  <a href="/#contacts">Контакты</a>
+<a href="#contacts">Контакты</a>
 </ul>
 
         <div className="language">

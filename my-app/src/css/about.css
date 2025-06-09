@@ -98,7 +98,7 @@
     transform: translateY(-50%);
     width: 20px;
     height: 20px;
-    background-image: url('images/check-mark-icon.png'); /* adjust path if needed */
+    background-image: url('../assets/images/check-mark-icon.png'); /* adjust path if needed */
     background-size: contain;
     background-repeat: no-repeat;
 }
