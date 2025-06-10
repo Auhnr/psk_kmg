@@ -1,0 +1,52 @@
+/* contacts.css */
+
+.contacts-page {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 30px 20px;
+  background: #ffffff; /* светло-серый фон */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2d3748; /* темно-серый/синий для текста */
+}
+
+.contacts-page h1 {
+  font-size: 2.8rem;
+  margin-bottom: 25px;
+  text-align: center;
+  color: #2EAF7D; /* темно-синий */
+  letter-spacing: 1.2px;
+}
+
+.contacts-page p {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  margin: 15px 0;
+  padding-left: 10px;
+  border-left: 4px solid #2EAF7D; /* средний синий акцент */
+  transition: border-color 0.3s ease;
+}
+
+.contacts-page p strong {
+  color: #2EAF7D; /* насыщенный синий */
+  font-weight: 700;
+}
+
+.contacts-page p:hover {
+  border-left-color: #2EAF7D; /* при наведении чуть ярче */
+}
+
+@media (max-width: 600px) {
+  .contacts-page {
+    margin: 20px 10px;
+    padding: 20px 15px;
+  }
+
+  .contacts-page h1 {
+    font-size: 2.2rem;
+  }
+
+  .contacts-page p {
+    font-size: 1rem;
+  }
+}
