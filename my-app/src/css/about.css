@@ -38,7 +38,7 @@
     padding: 20px 20px 20px 20px;
     display: flex;
     border-radius: 3px;
-    margin: 10px 0 0 65px;
+    margin: 30px 0 0 65px;
     text-align: left;
 }
 
@@ -73,10 +73,9 @@
 
 
 
-/* .about-content h3::before { */
 .with-check {
     position: relative;
-    padding-left: 40px; /* space for the checkmark */
+    padding-left: 40px; 
     font-family: 'Inter', sans-serif;
     color: #1C2752;
     font-size: 20px;
@@ -100,19 +99,21 @@
   background-color: white;
 }
 
-/* Фон применяется только на больших экранах */
 @media (min-width: 1200px) {
   .about {
-    height: 100vh;
+    height: 110vh;
     background-image: url("../assets/images/main-about.png");
-    background-position: left center;
+    background-position: left top;
     background-repeat: no-repeat;
-    background-size: contain; /* или cover — в зависимости от нужного эффекта */
+    background-size: 50% 100%; /* Картинка ровно на половину ширины и всю высоту */
     padding: 0;
+    display: flex;
+    align-items: stretch;
   }
 
   .about-content {
     width: 50%;
+    margin-left: auto; /* Контент справа */
     padding: 0px 20px 0 20px;
     background-color: transparent;
   }
