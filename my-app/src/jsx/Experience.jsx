@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import buildingPic from "../assets/images/building-pic.png";
 import icon from "../assets/images/icon-exp.png"; 
 import locker from "../assets/images/icon-exp2.png"; 
@@ -31,7 +32,7 @@ const ExperienceSection = () => {
               Включает проекты по электроснабжению, строительству буровых площадок, 
               нефтепроводным системам, образовательным и административным зданиям.
             </p>
-            <button className="details-button">Подробнее</button>
+            <Link to="/projects" className="details-button">Подробнее</Link>
           </div>
 
           <div className="experience-card">
@@ -39,9 +40,9 @@ const ExperienceSection = () => {
             <h2>В Области Строительства</h2>
             <p>
               Капитальные ремонты зданий, строительство вахтовых поселков, 
-              монтаж инженерных сетей.
+              монтаж инженерских сетей.
             </p>
-            <button className="details-button">Подробнее</button>
+            <Link to="/projects" className="details-button">Подробнее</Link>
           </div>
         </div>
       </div>

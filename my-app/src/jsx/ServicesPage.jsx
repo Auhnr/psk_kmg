@@ -103,9 +103,9 @@ const ServicesPage = () => {
           <li className="details-feature">Электрометрические работы для проектов антикоррозийной защиты.</li>
         </ul>
 
-                    <div className="details-equipment">
+                    {/* <div className="details-equipment">
             <button className="details-equipment-button">Используемое оборудование</button>
-        </div>
+        </div> */}
     </div>
 
     {/* Правая часть — изображение */}

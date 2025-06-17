@@ -109,6 +109,9 @@
   bottom: 20px;
   right: 30px;
   transition: background-color 0.3s ease, color 0.3s ease;
+  text-decoration: none; 
+  outline: none;
+  box-shadow: none;
 }
 
 /* Мобильные (вертикальные) 0-767px */
