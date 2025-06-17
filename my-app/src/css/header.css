@@ -5,27 +5,29 @@ header, #logo, #nav-bar {
 }
 
 header {
-    font-family: 'Inter', sans-serif;
-    display: flex;
+    font-family: Inter, sans-serif;
+    display: flex
+;
     align-items: center;
     justify-content: space-between;
-    background-color: #FFFFFF;
+    background-color: rgb(255, 255, 255);
     width: 100%;
-    padding: 15px 0;
     position: relative;
     z-index: 1000;
+    padding: 15px 0px;
 }
 
 #logo img {
     width: 150px;
     height: auto;
     margin-left: 25px;
+    margin-right: 50px;
 }
 
 /* Десктопное меню */
 #nav-bar ul {
     display: flex;
-    gap: 65px;
+    gap: 50px;
     list-style-type: none;
     margin-right: 40px;
     margin-bottom: 0;
@@ -89,7 +91,7 @@ header {
     cursor: pointer;
     transition: all 0.3s ease;
     outline: none;
-    margin: 20px 0 0 15px;
+    margin: 0 10px 0 15px;
     display: block;
 }
 
@@ -100,7 +102,7 @@ header {
     position: fixed;
     top: 0;
     right: -100%; /* Начинаем за пределами экрана справа */
-    width: 80%;
+    width: 30%;
     max-width: 320px;
     height: 100vh;
     background-color: #FFFFFF;
@@ -184,7 +186,7 @@ header {
 
 .burger-menu.active {
     position: fixed;
-    right: 25px;
+    right: 0;
     top: 25px;
 }
 
@@ -207,63 +209,87 @@ header {
     width: 30px;
 }
 
-/* Медиа-запросы - обновленные */
+.mobile-language {
+    display: none;
+}
 
+/* Обновленные медиа-запросы */
 @media (max-width: 1024px) {
     #nav-bar ul {
-        gap: 40px;
+        gap: 25px;
+        margin-right: 20px;
+    }
+    
+    #language-selector {
+        margin-right: 20px;
+        padding: 10px 35px 10px 15px;
+        font-size: 15px;
     }
 }
 
-@media (max-width: 768px) {
+/* Бургер-меню появляется на 920px */
+@media (max-width: 920px) {
     #nav-bar ul {
-        display: none;
+        display: none; /* Скрываем обычное меню */
     }
     
     #nav-bar .language {
-        display: none;
+        display: none; /* Скрываем языковой селектор */
     }
     
     .burger-menu {
-        display: block;
+        display: block; /* Показываем бургер */
+        margin-right: 20px;
     }
     
     .mobile-menu {
-        display: block;
+        display: block; /* Активируем мобильное меню */
     }
 
-    .mobile-menu {
+    .mobile-language {
         display: block;
+    margin-left: auto;
+    margin-right: 10px;
+    }
+
+      #language-selector {
+    margin: 0;
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 2px solid #4E977A;
+    color: #4E977A;
+    background-color: white;
+    border-radius: 4px;
+  }
+    
+    /* Корректировка логотипа */
+    #logo img {
+        width: 130px;
+        margin-left: 15px;
     }
     
-    .burger-menu {
-        display: block;
-    }
-    
-    /* Запрещаем скролл страницы при открытом меню */
+    /* Запрещаем скролл при открытом меню */
     body.menu-open {
         overflow: hidden;
     }
 }
 
+/* Дополнительные корректировки для маленьких экранов */
 @media (max-width: 480px) {
     .mobile-menu {
-        width: 85%;
+        width: 60%;
     }
     
     .burger-menu {
         margin-right: 15px;
     }
+    
     #logo img {
-        width: 120px;
-        margin-left: 15px;
+        width: 110px;
+        margin-left: 10px;
     }
-
     
     .mobile-menu a {
         font-size: 16px;
     }
-}
-
-
-
+} 

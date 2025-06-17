@@ -4,7 +4,7 @@
     height: 105vh;
     background-image: url("../assets/images/hero.png");
     background-size: cover;
-    background-position: center;
+    background-position: left center;
     background-repeat: no-repeat;
 
     display: flex;
@@ -19,7 +19,7 @@
     content: '';
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0, 0, 0, 0.4); /* adjust opacity */
+    background: rgba(0, 0, 0, 0.6); 
     z-index: 1;
 }
 
@@ -88,7 +88,7 @@
 @media (max-width: 768px) {
   .hero {
     background-attachment: scroll; /* отключаем параллакс на мобильных */
-    min-height: 90vh;
+    height: 90vh;
   }
   .hero-content {
     margin: 150px 15px 0;
@@ -104,8 +104,9 @@
   }
   .hero-button {
     padding: 16px 32px;
-    font-size: 16px;
+    font-size: 19px;
   }
+  
 }
 
 @media (max-width: 576px) {
@@ -121,7 +122,7 @@
   }
   .hero-button {
     padding: 14px 28px;
-    font-size: 14px;
+    font-size: 18px;
     margin-top: 15px;
   }
 }

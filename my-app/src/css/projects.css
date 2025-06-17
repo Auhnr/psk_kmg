@@ -94,20 +94,170 @@ max-width: 1020px;
 }
 
 /* Адаптивность */
-@media (max-width: 768px) {
+/* Мобильные устройства (вертикальные) 0-575px */
+@media (max-width: 575.98px) {
+  .projects-container {
+    margin: 20px 15px;
+    padding: 15px;
+  }
+
+  .projects-header {
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto 15px;
+  }
+
+  .projects-header-title {
+    font-size: 16px;
+  }
+
+  .projects-main-title {
+    font-size: 28px;
+    margin: 20px 0 15px;
+    text-align: center;
+  }
+
+  .projects-subtitle {
+    font-size: 16px;
+    margin: 15px 0;
+    text-align: center;
+  }
+
   .projects-columns {
     flex-direction: column;
+    gap: 20px;
+    font-size: 16px;
   }
-  
-  .projects-header-title {
-    font-size: 1.3rem;
+
+  .projects-column {
+    width: 100%;
   }
-  
+
+  .projects-list,
+  .projects-list-full {
+    padding-left: 15px;
+  }
+
+  .projects-list li:before,
+  .projects-list-full li:before {
+    font-size: 1.2rem;
+    top: -2px;
+  }
+
+  .projects-list-full {
+    margin-left: 0;
+    max-width: 100%;
+    font-size: 16px;
+  }
+}
+
+/* Мобильные (ландшафтные) 576-767px */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .projects-container {
+    margin: 25px 30px;
+    padding: 20px;
+  }
+
+  .projects-header {
+    width: 280px;
+    margin: 0 auto 15px;
+  }
+
   .projects-main-title {
-    font-size: 1.7rem;
+    font-size: 32px;
+    margin: 25px 0;
   }
-  
+
+  .projects-columns {
+    gap: 30px;
+    font-size: 17px;
+  }
+}
+
+/* Планшеты 768-991px */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .projects-container {
+    margin: 30px 50px;
+    padding: 25px;
+  }
+
+  .projects-main-title {
+    font-size: 36px;
+  }
+
+  .projects-columns {
+    gap: 40px;
+  }
+
+  .projects-list-full {
+    max-width: 800px;
+  }
+}
+
+/* Малые десктопы 992-1199px */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .projects-container {
+    margin: 40px 80px;
+  }
+
+  .projects-main-title {
+    font-size: 40px;
+  }
+
+  .projects-columns {
+    gap: 50px;
+  }
+}
+
+/* Большие десктопы 1200px+ */
+@media (min-width: 1200px) {
+  .projects-container {
+    max-width: 1400px;
+    margin: 50px auto;
+  }
+}
+
+/* Особые адаптации */
+
+/* Очень маленькие экраны (<360px) */
+@media (max-width: 359px) {
+  .projects-main-title {
+    font-size: 24px;
+  }
+
+  .projects-header-title {
+    font-size: 14px;
+  }
+
   .projects-subtitle {
-    font-size: 1.3rem;
+    font-size: 15px;
+  }
+}
+
+/* Ландшафтные мобильные */
+@media (max-width: 991px) and (orientation: landscape) {
+  .projects-columns {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .projects-column {
+    flex: 1 0 40%;
+  }
+}
+
+/* Высокие экраны */
+@media (min-height: 900px) {
+  .projects-container {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+}
+
+/* Фикс для Safari */
+@supports (-webkit-touch-callout: none) {
+  .projects-list li:before,
+  .projects-list-full li:before {
+    -webkit-text-size-adjust: none;
   }
 }

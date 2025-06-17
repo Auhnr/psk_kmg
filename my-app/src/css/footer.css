@@ -108,30 +108,218 @@
 }
 
 
-/* Адаптация для планшетов */
-@media (max-width: 900px) {
+/* Мобильные (вертикальные) 0-575px */
+@media (max-width: 575.98px) {
+  .footer {
+    padding: 30px 0 5px;
+  }
+  
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 0 20px;
+  }
+  
+  .footer-logo-section {
+    align-items: center;
+    text-align: center;
+  }
+  
+  .footer-logo {
+    width: 140px;
+    margin-bottom: 15px;
+  }
+  
+  .social-buttons {
+    justify-content: center;
+    margin-top: 15px;
+  }
+  
+  .footer-title {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  
+  .working-hours {
+    margin: 0 auto;
+    width: auto;
+  }
+  
+  .working-hours td {
+    padding: 5px 10px;
+    text-align: center;
+    width: auto;
+  }
+  
+  .contact-item {
+    margin: 0 0 20px;
+    text-align: center;
+  }
+  
+  .footer-description {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  
+  .footer-copy {
+    padding: 10px 20px 0;
+    text-align: center;
+    font-size: 14px;
+  }
+}
+
+/* Мобильные (ландшафтные) 576-767px */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 0 30px;
+  }
+  
+  .footer-logo-section {
+    align-items: center;
+  }
+  
+  .working-hours {
+    margin: 0 auto;
+  }
+  
+  .working-hours td {
+    text-align: center;
+  }
+  
+  .footer-title {
+    text-align: center;
+  }
+  
+  .contact-item {
+    text-align: center;
+    margin-right: 0;
+  }
+}
+
+/* Планшеты 768-991px */
+@media (min-width: 768px) and (max-width: 991.98px) {
   .footer-container {
     grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    padding: 0 40px;
+  }
+  
+  .working-hours {
+    margin: 0 auto;
+  }
+  
+  .working-hours td {
+    text-align: center;
+  }
+  
+  .footer-title {
+    text-align: center;
   }
   
   .footer-logo-section {
     grid-column: span 2;
     align-items: center;
-    margin-bottom: 30px;
   }
 }
 
-/* Адаптация для мобильных устройств */
-@media (max-width: 600px) {
+/* Малые десктопы 992-1199px */
+@media (min-width: 992px) and (max-width: 1199.98px) {
   .footer-container {
-    grid-template-columns: 1fr;
+    gap: 60px;
+    padding: 0 60px;
+  }
+  
+  .working-hours {
+    margin: 0 auto;
+  }
+  
+  .working-hours td {
+    text-align: center;
+  }
+}
+
+/* Большие десктопы 1200px+ */
+@media (min-width: 1200px) {
+  .working-hours {
+    margin: 0 auto;
+  }
+  
+  .working-hours td {
+    text-align: center;
+  }
+}
+
+/* Особые адаптации */
+
+/* Очень маленькие телефоны (<360px) */
+@media (max-width: 359px) {
+  .footer {
+    padding: 25px 0 5px;
+  }
+  
+  .footer-container {
+    padding: 0 15px;
+  }
+  
+  .footer-logo {
+    width: 120px;
+  }
+  
+  .social-button img {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+/* Ландшафтные мобильные */
+@media (max-height: 500px) and (orientation: landscape) {
+  .footer {
+    padding: 20px 0 5px;
+  }
+  
+  .footer-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
   }
   
   .footer-logo-section {
-    grid-column: span 1;
+    align-items: flex-start;
   }
-  
-  .social-buttons {
-    justify-content: center;
+}
+
+/* 2K/4K мониторы */
+@media (min-width: 1600px) {
+  .footer-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0;
   }
+}
+
+/* Фикс для Safari */
+@supports (-webkit-touch-callout: none) {
+  .footer {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+/* Центрирование рабочих часов для всех устройств */
+.working-hours-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.working-hours {
+  text-align: center;
+}
+
+.working-hours td {
+  text-align: center !important;
+  padding: 5px 15px !important;
 }

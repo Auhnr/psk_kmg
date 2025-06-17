@@ -163,21 +163,219 @@
 }
 
 
-/* Адаптация для мобильных устройств */
-@media (max-width: 768px) {
-  .details-main-title {
-    font-size: 28px;
+/* Мобильные устройства (вертикальные) 0-575px */
+@media (max-width: 575.98px) {
+  .details-container {
+    padding: 20px 15px;
   }
-  
+
+  .details-block {
+    margin-left: 0;
+    padding-bottom: 30px;
+  }
+
+  .details-line,
+  .details-build {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 30px;
+    padding: 0 15px;
+  }
+
+  .title-service,
   .details-subtitle {
-    font-size: 20px;
+    font-size: 28px;
+    margin: 20px 0;
+    text-align: center;
   }
-  
-  .details-feature, .details-spec {
-    font-size: 15px;
+
+  .details-flex-block {
+    flex-direction: column;
   }
-  
+
+  .details-text-side {
+    width: 100%;
+    min-width: auto;
+    order: 1;
+  }
+
+  .img-sec-services,
+  .img-sec-service,
+  .img-sec-servicess {
+    display: none; /* Скрываем изображения на мобильных */
+  }
+
+  .details-features {
+    width: 100%;
+    padding: 0 15px;
+  }
+
+  .details-feature {
+    font-size: 16px;
+  }
+
   .details-specs {
     padding-left: 20px;
+  }
+
+  .details-spec {
+    font-size: 14px;
+  }
+
+  .details-equipment-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+  }
+}
+
+/* Мобильные (ландшафтные) 576-767px */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .details-container {
+    padding: 30px 20px;
+  }
+
+  .details-block {
+    margin-left: 40px;
+  }
+
+  .details-line,
+  .details-build {
+    width: 80%;
+    margin-left: 40px;
+  }
+
+  .title-service,
+  .details-subtitle {
+    font-size: 32px;
+    margin-left: 40px;
+  }
+
+  .img-sec-services,
+  .img-sec-service,
+  .img-sec-servicess {
+    display: none; /* Скрываем изображения */
+  }
+
+  .details-text-side {
+    width: 100%;
+  }
+
+  .details-features {
+    width: 100%;
+  }
+
+  .details-feature {
+    font-size: 17px;
+  }
+}
+
+/* Планшеты 768-991px */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .details-container {
+    padding: 40px 30px;
+  }
+
+  .details-block {
+    margin-left: 60px;
+  }
+
+  .details-line,
+  .details-build {
+    width: 70%;
+    margin-left: 60px;
+  }
+
+  .title-service,
+  .details-subtitle {
+    font-size: 36px;
+    margin-left: 60px;
+  }
+
+  .img-sec-services,
+  .img-sec-service,
+  .img-sec-servicess {
+    display: block;
+    max-width: 300px;
+    margin: 40px 40px 0 0;
+  }
+
+  .details-text-side {
+    width: 50%;
+  }
+}
+
+/* Малые десктопы 992-1199px */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .details-block {
+    margin-left: 100px;
+  }
+
+  .details-line,
+  .details-build {
+    width: 60%;
+    margin-left: 100px;
+  }
+
+  .title-service,
+  .details-subtitle {
+    font-size: 40px;
+    margin-left: 100px;
+  }
+
+  .img-sec-services,
+  .img-sec-service,
+  .img-sec-servicess {
+    max-width: 350px;
+    margin: 50px 100px 0 0;
+  }
+}
+
+/* Большие десктопы 1200px+ */
+@media (min-width: 1200px) {
+  .details-container {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .img-sec-services,
+  .img-sec-service,
+  .img-sec-servicess {
+    max-width: 450px;
+  }
+}
+
+/* Особые адаптации */
+
+/* Очень маленькие экраны (<360px) */
+@media (max-width: 359px) {
+  .title-service,
+  .details-subtitle {
+    font-size: 24px;
+  }
+
+  .details-feature {
+    font-size: 15px;
+  }
+}
+
+/* Ландшафтные мобильные */
+@media (max-width: 991px) and (orientation: landscape) {
+  .img-sec-services,
+  .img-sec-service,
+  .img-sec-servicess {
+    display: none; /* Скрываем изображения в ландшафте */
+  }
+
+  .details-text-side {
+    width: 100%;
+  }
+}
+
+/* Фикс для Safari */
+@supports (-webkit-touch-callout: none) {
+  .details-feature:before,
+  .details-spec:before {
+    -webkit-text-size-adjust: none;
   }
 }

@@ -71,9 +71,7 @@ const ServicesPage = () => {
           <li className="details-feature">Морское изыскание.</li>
         </ul>
 
-                    <div className="details-equipment">
-            <button className="details-equipment-button">Используемое оборудование</button>
-        </div>
+
     </div>
 
     {/* Правая часть — изображение */}

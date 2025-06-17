@@ -107,14 +107,211 @@
 }
 
 /* Адаптивность */
-@media (max-width: 768px) {
-  .company-intro {
-    flex-direction: column;
+/* Мобильные устройства (вертикальные) 0-575px */
+@media (max-width: 575.98px) {
+  .company-image {
+    width: 100%;
+    max-width: 400px; /* Ограничиваем максимальную ширину */
+    margin: 0 auto 25px;
   }
   
-  .company-image, 
-  .company-description {
-    flex: none;
+  .company-image img {
     width: 100%;
+    height: auto;
+    max-height: 300px; /* Фиксируем приятную пропорцию */
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .company-container {
+    margin: 20px 15px;
+    padding: 15px;
+  }
+
+  .company-header {
+    width: 100%;
+    padding: 0 15px;
+    margin-bottom: 5px;
+  }
+
+  .company-header-title {
+    font-size: 16px;
+  }
+
+  .company-container-h2,
+  .quality-policy-h2 {
+    font-size: 28px;
+    margin: 20px 0 15px;
+  }
+
+  .company-intro {
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+
+  .company-image {
+    width: 100%;
+    order: -1;
+  }
+
+  .company-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .company-description {
+    font-size: 16px;
+  }
+
+  .quality-policy {
+    padding: 20px;
+    margin-bottom: 30px;
+  }
+
+  .policy-list li {
+    font-size: 16px;
+    padding-left: 25px;
+  }
+}
+
+/* Мобильные (ландшафтные) 576-767px */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .company-image {
+    display: none;
+  }
+  
+  .company-image img {
+    display: none;
+  } 
+ 
+  .company-container {
+    margin: 30px 25px;
+    padding: 20px;
+  }
+
+  .company-header {
+    width: 280px;
+  }
+
+  .company-container-h2,
+  .quality-policy-h2 {
+    font-size: 32px;
+  }
+
+  .company-intro {
+    gap: 40px;
+  }
+
+  .company-image {
+    width: 45%;
+  }
+
+  .company-description {
+    font-size: 17px;
+  }
+
+  .quality-policy {
+    padding: 25px 30px;
+  }
+}
+
+/* Планшеты 768-991px */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .company-container {
+    margin: 40px 50px;
+  }
+
+  .company-container-h2,
+  .quality-policy-h2 {
+    font-size: 36px;
+  }
+  
+  .company-intro {
+    gap: 50px;
+  }
+
+  .quality-policy {
+    padding: 30px 40px;
+  }
+
+  .company-image {
+    display: none;
+  }
+  
+  .company-image img {
+    display: none;
+  } 
+}
+
+/* Малые десктопы 992-1199px */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .company-container {
+    margin: 50px 80px;
+  }
+
+  .company-container-h2,
+  .quality-policy-h2 {
+    font-size: 40px;
+  }
+
+    .company-image {
+    display: none;
+  }
+  
+  .company-image img {
+    display: none;
+  } 
+}
+
+/* Большие десктопы 1200px+ */
+@media (min-width: 1200px) {
+  .company-container {
+    max-width: 1400px;
+    margin: 60px auto;
+  }
+}
+
+/* Особые адаптации */
+
+/* Очень маленькие экраны (<360px) */
+@media (max-width: 359px) {
+  .company-header-title {
+    font-size: 14px;
+  }
+  
+  .company-container-h2,
+  .quality-policy-h2 {
+    font-size: 24px;
+  }
+}
+
+/* Ландшафтные мобильные */
+@media (max-width: 991px) and (orientation: landscape) {
+  .company-intro {
+    flex-direction: row;
+  }
+  
+  .company-image {
+    width: 40%;
+  }
+  
+  .company-description {
+    font-size: 16px;
+  }
+}
+
+/* Высокие экраны */
+@media (min-height: 900px) {
+  .company-container {
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+}
+
+/* Фикс для Safari */
+@supports (-webkit-touch-callout: none) {
+  .company-image img {
+    transform: translateZ(0);
   }
 }
